@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Profile Picture Maker — Circular Crop, Transparent PNG | MonoTools</title>
+  <meta name="description" content="Turn any photo into a circular profile picture with a transparent background. Drag and zoom to frame it exactly how you want.">
+  <link rel="canonical" href="https://www.monotools.example/profile-pic-maker.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Profile Picture Maker — Circular Crop, Transparent PNG | MonoTools">
+  <meta property="og:description" content="Turn any photo into a circular profile picture with a transparent background. Drag and zoom to frame it exactly how you want.">
+  <meta property="og:url" content="https://www.monotools.example/profile-pic-maker.html">
+  <meta property="og:site_name" content="MonoTools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Profile Picture Maker — Circular Crop, Transparent PNG | MonoTools">
+  <meta name="twitter:description" content="Turn any photo into a circular profile picture with a transparent background. Drag and zoom to frame it exactly how you want.">
+
+  <!-- Fonts: Inter (Latin) + Cairo (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjMuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNCAzMFY4TDEzIDIwIDIyIDhIMzZNMjkgOFYzNCIvPjwvc3ZnPg==">
+</head>
+<body>
+
+<!-- ============================================================ HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" data-nav="home" aria-label="MonoTools">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 30V8L13 20 22 8H36M29 8V34"/>
+      </svg>
+      <span class="logo-text">Mono<span class="light">Tools</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+      <a href="qr-code-generator.html" data-nav="qr" data-i18n="nav.qr">QR Generator</a>
+      <a href="background-remover.html" data-nav="bg" data-i18n="nav.bg">Background Remover</a>
+      <a href="image-compressor.html" data-nav="compress" data-i18n="nav.compress">Image Compressor</a>
+      <a class="active" href="profile-pic-maker.html" data-nav="pfp" data-i18n="nav.pfp">Profile Pic Maker</a>
+      <a href="youtube-thumbnail-downloader.html" data-nav="youtube" data-i18n="nav.youtube">YouTube Thumbnail</a>
+      <a href="image-to-pdf.html" data-nav="pdf" data-i18n="nav.pdf">Image to PDF</a>
+      <a href="word-counter.html" data-nav="wordCounter" data-i18n="nav.wordCounter">Word Counter</a>
+      <a href="password-generator.html" data-nav="passwordGenerator" data-i18n="nav.passwordGenerator">Password Generator</a>
+      <a href="case-converter.html" data-nav="caseConverter" data-i18n="nav.caseConverter">Case Converter</a>
+      <a href="remove-duplicate-lines.html" data-nav="dedupe" data-i18n="nav.dedupe">Remove Duplicate Lines</a>
+      <a href="text-diff-checker.html" data-nav="textDiff" data-i18n="nav.textDiff">Text Diff Checker</a>
+      <a href="lorem-ipsum-generator.html" data-nav="loremIpsum" data-i18n="nav.loremIpsum">Lorem Ipsum Generator</a>
+      <a href="url-slug-generator.html" data-nav="slugGenerator" data-i18n="nav.slugGenerator">URL Slug Generator</a>
+      <a href="json-formatter.html" data-nav="jsonFormatter" data-i18n="nav.jsonFormatter">JSON Formatter</a>
+      <a href="color-converter.html" data-nav="colorConverter" data-i18n="nav.colorConverter">Color Converter</a>
+    </nav>
+
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+      </svg>
+      <span id="langLabel">العربية</span>
+    </button>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================================ TOP AD -->
+<div class="ad-slot ad-top">
+  <div class="ad-inner">
+    <span class="ad-label" data-i18n="ad.top">Ad Space — Top</span>
+    <span class="ad-size">728 × 90</span>
+  </div>
+</div>
+
+<!-- ============================================================ MAIN -->
+<main id="app" class="container app-main">
+
+  <section id="view-pfp" class="view active tool-page">
+    <div class="tool-header">
+      <a href="index.html" class="back-btn" data-nav="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span data-i18n="back">Back</span>
+      </a>
+      <h2 class="tool-page-title" data-i18n="pfp.title">Profile Pic Maker</h2>
+    </div>
+    <p class="tool-page-desc" data-i18n="pfp.desc">Crop your photo into a clean circular profile picture with a transparent background. Drag to reposition, pinch or scroll to zoom. Runs entirely on your device.</p>
+
+    <div id="pfpWork">
+      <div class="upload-zone" id="pfpZone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M12 4l-5 5M12 4l5 5M4 20h16"/></svg>
+        <p data-i18n="upload.drop">Drop image here or click to select</p>
+        <span data-i18n="upload.sub">PNG · JPG · WEBP · BMP — processed locally</span>
+        <input type="file" class="upload-input" id="pfpInput" accept="image/*">
+      </div>
+
+      <div id="pfpEditor" style="display:none;">
+        <div class="pfp-crop-wrap">
+          <div class="pfp-crop-frame" id="pfpCropFrame">
+            <img id="pfpCropImg" alt="" draggable="false">
+          </div>
+        </div>
+        <p class="pfp-hint" data-i18n="pfp.hint">Drag to reposition. Pinch or scroll to zoom.</p>
+        <button class="btn btn-block" id="pfpDownloadBtn" data-i18n="pfp.download">Download PNG</button>
+      </div>
+
+      <div class="preview-area" id="pfpPreview"></div>
+    </div>
+
+    <div class="trust-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span data-i18n="trust">100% Privacy: All files are processed locally on your device</span>
+    </div>
+  </section>
+
+  <section class="seo-content">
+    <h2 data-i18n="seo.pfp.heading">About this tool</h2>
+    <p data-i18n="seo.pfp.intro">Intro text.</p>
+    <ol class="seo-howto">
+        <li data-i18n="seo.pfp.howto.1">Step 1</li>
+        <li data-i18n="seo.pfp.howto.2">Step 2</li>
+        <li data-i18n="seo.pfp.howto.3">Step 3</li>
+    </ol>
+    <h2 data-i18n="seo.pfp.faqHeading">Frequently asked questions</h2>
+    <div class="seo-faq">
+      <div class="seo-faq-item">
+        <h3 data-i18n="seo.pfp.faq.1.q">Question 1</h3>
+        <p data-i18n="seo.pfp.faq.1.a">Answer 1</p>
+      </div>
+      <div class="seo-faq-item">
+        <h3 data-i18n="seo.pfp.faq.2.q">Question 2</h3>
+        <p data-i18n="seo.pfp.faq.2.a">Answer 2</p>
+      </div>
+      <div class="seo-faq-item">
+        <h3 data-i18n="seo.pfp.faq.3.q">Question 3</h3>
+        <p data-i18n="seo.pfp.faq.3.a">Answer 3</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ BOTTOM AD -->
+<div class="ad-slot ad-bottom">
+  <div class="ad-inner">
+    <span class="ad-label" data-i18n="ad.bottom">Ad Space — Bottom</span>
+    <span class="ad-size">970 × 90</span>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 30V8L13 20 22 8H36M29 8V34"/>
+      </svg>
+      <div>
+        <p class="footer-name">Mono<span class="light">Tools</span></p>
+        <p class="footer-tag" data-i18n="footer.tag">Minimalist image tools — black ink on white</p>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+      <a href="qr-code-generator.html" data-nav="qr" data-i18n="nav.qr">QR Generator</a>
+      <a href="background-remover.html" data-nav="bg" data-i18n="nav.bg">Background Remover</a>
+      <a href="image-compressor.html" data-nav="compress" data-i18n="nav.compress">Image Compressor</a>
+      <a class="active" href="profile-pic-maker.html" data-nav="pfp" data-i18n="nav.pfp">Profile Pic Maker</a>
+      <a href="youtube-thumbnail-downloader.html" data-nav="youtube" data-i18n="nav.youtube">YouTube Thumbnail</a>
+      <a href="image-to-pdf.html" data-nav="pdf" data-i18n="nav.pdf">Image to PDF</a>
+      <a href="word-counter.html" data-nav="wordCounter" data-i18n="nav.wordCounter">Word Counter</a>
+      <a href="password-generator.html" data-nav="passwordGenerator" data-i18n="nav.passwordGenerator">Password Generator</a>
+      <a href="case-converter.html" data-nav="caseConverter" data-i18n="nav.caseConverter">Case Converter</a>
+      <a href="remove-duplicate-lines.html" data-nav="dedupe" data-i18n="nav.dedupe">Remove Duplicate Lines</a>
+      <a href="text-diff-checker.html" data-nav="textDiff" data-i18n="nav.textDiff">Text Diff Checker</a>
+      <a href="lorem-ipsum-generator.html" data-nav="loremIpsum" data-i18n="nav.loremIpsum">Lorem Ipsum Generator</a>
+      <a href="url-slug-generator.html" data-nav="slugGenerator" data-i18n="nav.slugGenerator">URL Slug Generator</a>
+      <a href="json-formatter.html" data-nav="jsonFormatter" data-i18n="nav.jsonFormatter">JSON Formatter</a>
+      <a href="color-converter.html" data-nav="colorConverter" data-i18n="nav.colorConverter">Color Converter</a>
+    </nav>
+    <div class="footer-credit">
+      <span class="credit-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"/>
+          <path d="M14 6l3 3"/>
+        </svg>
+        <span data-i18n="footer.dev">Developed by</span>
+        <span class="credit-name">Shado Designer</span>
+      </span>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> MonoTools — <span data-i18n="footer.copy">All rights reserved</span></p>
+    <nav class="footer-legal">
+      <a href="about.html" data-i18n="footer.about">About Us</a>
+      <a href="contact.html" data-i18n="footer.contact">Contact</a>
+      <a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

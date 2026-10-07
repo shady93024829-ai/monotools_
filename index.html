@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MonoTools — Free Image Tools: QR, Background Remover, Compressor & More</title>
+  <meta name="description" content="Six fast, free image tools that run entirely in your browser. QR codes, background removal, image compression, profile pictures, YouTube thumbnails, and image-to-PDF. No uploads, 100% private.">
+  <link rel="canonical" href="https://www.monotools.example/index.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MonoTools — Free Image Tools: QR, Background Remover, Compressor & More">
+  <meta property="og:description" content="Six fast, free image tools that run entirely in your browser. QR codes, background removal, image compression, profile pictures, YouTube thumbnails, and image-to-PDF. No uploads, 100% private.">
+  <meta property="og:url" content="https://www.monotools.example/index.html">
+  <meta property="og:site_name" content="MonoTools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MonoTools — Free Image Tools: QR, Background Remover, Compressor & More">
+  <meta name="twitter:description" content="Six fast, free image tools that run entirely in your browser. QR codes, background removal, image compression, profile pictures, YouTube thumbnails, and image-to-PDF. No uploads, 100% private.">
+
+  <!-- Fonts: Inter (Latin) + Cairo (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjMuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNCAzMFY4TDEzIDIwIDIyIDhIMzZNMjkgOFYzNCIvPjwvc3ZnPg==">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MonoTools",
+    "url": "https://www.monotools.example/",
+    "description": "Six fast, free image tools that run entirely in your browser: QR codes, background removal, image compression, profile picture maker, YouTube thumbnails, and image-to-PDF."
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============================================================ HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="active logo" data-nav="home" aria-label="MonoTools">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 30V8L13 20 22 8H36M29 8V34"/>
+      </svg>
+      <span class="logo-text">Mono<span class="light">Tools</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+      <a href="qr-code-generator.html" data-nav="qr" data-i18n="nav.qr">QR Generator</a>
+      <a href="background-remover.html" data-nav="bg" data-i18n="nav.bg">Background Remover</a>
+      <a href="image-compressor.html" data-nav="compress" data-i18n="nav.compress">Image Compressor</a>
+      <a href="profile-pic-maker.html" data-nav="pfp" data-i18n="nav.pfp">Profile Pic Maker</a>
+      <a href="youtube-thumbnail-downloader.html" data-nav="youtube" data-i18n="nav.youtube">YouTube Thumbnail</a>
+      <a href="image-to-pdf.html" data-nav="pdf" data-i18n="nav.pdf">Image to PDF</a>
+      <a href="word-counter.html" data-nav="wordCounter" data-i18n="nav.wordCounter">Word Counter</a>
+      <a href="password-generator.html" data-nav="passwordGenerator" data-i18n="nav.passwordGenerator">Password Generator</a>
+      <a href="case-converter.html" data-nav="caseConverter" data-i18n="nav.caseConverter">Case Converter</a>
+      <a href="remove-duplicate-lines.html" data-nav="dedupe" data-i18n="nav.dedupe">Remove Duplicate Lines</a>
+      <a href="text-diff-checker.html" data-nav="textDiff" data-i18n="nav.textDiff">Text Diff Checker</a>
+      <a href="lorem-ipsum-generator.html" data-nav="loremIpsum" data-i18n="nav.loremIpsum">Lorem Ipsum Generator</a>
+      <a href="url-slug-generator.html" data-nav="slugGenerator" data-i18n="nav.slugGenerator">URL Slug Generator</a>
+      <a href="json-formatter.html" data-nav="jsonFormatter" data-i18n="nav.jsonFormatter">JSON Formatter</a>
+      <a href="color-converter.html" data-nav="colorConverter" data-i18n="nav.colorConverter">Color Converter</a>
+    </nav>
+
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+      </svg>
+      <span id="langLabel">العربية</span>
+    </button>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================================ TOP AD -->
+<div class="ad-slot ad-top">
+  <div class="ad-inner">
+    <span class="ad-label" data-i18n="ad.top">Ad Space — Top</span>
+    <span class="ad-size">728 × 90</span>
+  </div>
+</div>
+
+<!-- ============================================================ MAIN -->
+<main id="app" class="container app-main">
+
+  <section id="view-home" class="view active">
+    <div class="hero">
+      <div class="hero-line-art">
+        <svg viewBox="0 0 600 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M10 60 Q60 10 110 60 T210 60 T310 60 T410 60 T510 60 T590 60" opacity="0.15"/>
+          <path d="M10 60 Q60 100 110 60 T210 60 T310 60 T410 60 T510 60 T590 60" opacity="0.1"/>
+        </svg>
+      </div>
+      <h1 class="hero-title">
+        <span data-i18n="hero.title">Free Tools, Right in Your Browser</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero.sub">Fifteen fast, free tools that run entirely in your browser. No uploads, no sign-up — your data never leaves your device.</p>
+    </div>
+
+    <section class="tools-grid">
+      <a href="qr-code-generator.html" class="tool-card" data-nav="qr">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="14" height="14"/>
+            <rect x="30" y="4" width="14" height="14"/>
+            <rect x="4" y="30" width="14" height="14"/>
+            <path d="M30 30h4v4M38 30h6M30 38h4M44 38v6M30 44h6M38 44h6"/>
+            <path d="M22 8v12M8 22h12"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.qr.title">QR Code Generator</h3>
+        <p data-i18n="card.qr.desc">Generate QR codes instantly in your browser. Square, high-resolution, downloadable as PNG.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="background-remover.html" class="tool-card" data-nav="bg">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 4a14 14 0 0 1 14 14c0 8-14 22-14 22S10 26 10 18A14 14 0 0 1 24 4z"/>
+            <circle cx="24" cy="18" r="6"/>
+            <path d="M36 36l8 8M44 36l-8 8" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.bg.title">Background Remover</h3>
+        <p data-i18n="card.bg.desc">Remove image backgrounds with on-device AI. Export transparent PNG instantly — no upload.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="image-compressor.html" class="tool-card" data-nav="compress">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="8" width="36" height="32" rx="2"/>
+            <path d="M28 20h8v-8"/>
+            <path d="M36 12l-9 9"/>
+            <path d="M20 28h-8v8"/>
+            <path d="M12 36l9-9"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.compress.title">Image Compressor</h3>
+        <p data-i18n="card.compress.desc">Compress images right in your browser — automatically, at the best possible quality.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="profile-pic-maker.html" class="tool-card" data-nav="pfp">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="24" r="18"/>
+            <circle cx="24" cy="19" r="6"/>
+            <path d="M11.5 37c2-7 6.5-11 12.5-11s10.5 4 12.5 11"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.pfp.title">Profile Pic Maker</h3>
+        <p data-i18n="card.pfp.desc">Turn any photo into a clean circular profile picture with a transparent background. Drag and zoom to frame it just right.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="youtube-thumbnail-downloader.html" class="tool-card" data-nav="youtube">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="8" width="40" height="32" rx="2"/>
+            <path d="M20 18l10 6-10 6V18z"/>
+            <path d="M4 40h40" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.yt.title">YouTube Thumbnail</h3>
+        <p data-i18n="card.yt.desc">Download any YouTube video thumbnail in the highest available quality, in one click.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="image-to-pdf.html" class="tool-card" data-nav="pdf">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 4H12a4 4 0 0 0-4 4v32a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4V16L28 4z"/>
+            <path d="M28 4v12h12"/>
+            <path d="M18 30h12M18 36h12" opacity="0.6"/>
+            <text x="24" y="26" text-anchor="middle" font-size="8" fill="currentColor" stroke="none" font-family="monospace">PDF</text>
+          </svg>
+        </div>
+        <h3 data-i18n="card.pdf.title">Image to PDF</h3>
+        <p data-i18n="card.pdf.desc">Convert multiple images into a single PDF file, right in your browser. Fast and secure.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="word-counter.html" class="tool-card" data-nav="wordCounter">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 12h36M6 22h36M6 32h24"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.wordCounter.title">Word Counter</h3>
+        <p data-i18n="card.wordCounter.desc">Count words, characters, sentences, and estimated reading time, with a keyword-density breakdown.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="password-generator.html" class="tool-card" data-nav="passwordGenerator">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="10" y="20" width="28" height="20" rx="3"/>
+            <path d="M16 20v-6a8 8 0 0 1 16 0v6"/>
+            <circle cx="24" cy="30" r="2.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.passwordGenerator.title">Password Generator</h3>
+        <p data-i18n="card.passwordGenerator.desc">Generate strong, random passwords with full control over length and character types.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="case-converter.html" class="tool-card" data-nav="caseConverter">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 34 14 12l8 22M8.5 27h11"/>
+            <path d="M28 22a6 6 0 1 1 0 12 6 6 0 0 1 0-12ZM40 22v12"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.caseConverter.title">Case Converter</h3>
+        <p data-i18n="card.caseConverter.desc">Convert text between uppercase, lowercase, title case, sentence case, and alternating case instantly.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="remove-duplicate-lines.html" class="tool-card" data-nav="dedupe">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 12h24M8 20h24M8 28h16" opacity="0.35"/>
+            <rect x="20" y="24" width="20" height="16" rx="2"/>
+            <path d="M25 32h10"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.dedupe.title">Remove Duplicate Lines</h3>
+        <p data-i18n="card.dedupe.desc">Clean up a list by removing duplicate lines while preserving the original order.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="text-diff-checker.html" class="tool-card" data-nav="textDiff">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="8" width="16" height="32" rx="2"/>
+            <rect x="27" y="8" width="16" height="32" rx="2"/>
+            <path d="M13 30h0M35 18h0" stroke-width="4"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.textDiff.title">Text Diff Checker</h3>
+        <p data-i18n="card.textDiff.desc">Compare two blocks of text and instantly see every line that was added or removed.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="lorem-ipsum-generator.html" class="tool-card" data-nav="loremIpsum">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 10h32M8 18h32M8 26h22M8 34h26"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.loremIpsum.title">Lorem Ipsum Generator</h3>
+        <p data-i18n="card.loremIpsum.desc">Generate placeholder paragraphs of classic Lorem Ipsum text for mockups and layouts.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="url-slug-generator.html" class="tool-card" data-nav="slugGenerator">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 14l-8 10 8 10M31 14l8 10-8 10M27 12l-6 24"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.slugGenerator.title">URL Slug Generator</h3>
+        <p data-i18n="card.slugGenerator.desc">Turn any title into a clean, SEO-friendly URL slug automatically.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="json-formatter.html" class="tool-card" data-nav="jsonFormatter">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 6c-4 0-5 2-5 6v4c0 3-1 4-3 4 2 0 3 1 3 4v4c0 4 1 6 5 6"/>
+            <path d="M32 6c4 0 5 2 5 6v4c0 3 1 4 3 4-2 0-3 1-3 4v4c0 4-1 6-5 6"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.jsonFormatter.title">JSON Formatter</h3>
+        <p data-i18n="card.jsonFormatter.desc">Format, validate, and color-highlight JSON data instantly, with clear syntax error detection.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+
+      <a href="color-converter.html" class="tool-card" data-nav="colorConverter">
+        <div class="tool-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 6a18 18 0 1 0 8 34c2-1 1-4-1-4h-3a5 5 0 0 1 0-10h6a6 6 0 0 0 6-6c0-8-7-14-16-14Z"/>
+            <circle cx="16" cy="20" r="2.4" fill="currentColor" stroke="none"/>
+            <circle cx="24" cy="15" r="2.4" fill="currentColor" stroke="none"/>
+            <circle cx="32" cy="20" r="2.4" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3 data-i18n="card.colorConverter.title">Color Converter</h3>
+        <p data-i18n="card.colorConverter.desc">Convert instantly between HEX, RGB, and HSL color codes, with a live preview swatch.</p>
+        <span class="tool-cta" data-i18n="card.cta">Open tool →</span>
+      </a>
+    </section>
+
+    <div class="trust-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+        <path d="M9 12l2 2 4-4"/>
+      </svg>
+      <span data-i18n="trust">100% Privacy: All files are processed locally on your device</span>
+    </div>
+
+    <section class="features-strip">
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>
+        <span data-i18n="feat.free">Completely Free</span>
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        <span data-i18n="feat.instant">Instant Results</span>
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 9h6M9 13h6"/></svg>
+        <span data-i18n="feat.private">Full Privacy</span>
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <span data-i18n="feat.nosignup">No Sign-up</span>
+      </div>
+    </section>
+  </section>
+
+</main>
+
+<!-- ============================================================ BOTTOM AD -->
+<div class="ad-slot ad-bottom">
+  <div class="ad-inner">
+    <span class="ad-label" data-i18n="ad.bottom">Ad Space — Bottom</span>
+    <span class="ad-size">970 × 90</span>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 30V8L13 20 22 8H36M29 8V34"/>
+      </svg>
+      <div>
+        <p class="footer-name">Mono<span class="light">Tools</span></p>
+        <p class="footer-tag" data-i18n="footer.tag">Minimalist image tools — black ink on white</p>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <a class="active" href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+      <a href="qr-code-generator.html" data-nav="qr" data-i18n="nav.qr">QR Generator</a>
+      <a href="background-remover.html" data-nav="bg" data-i18n="nav.bg">Background Remover</a>
+      <a href="image-compressor.html" data-nav="compress" data-i18n="nav.compress">Image Compressor</a>
+      <a href="profile-pic-maker.html" data-nav="pfp" data-i18n="nav.pfp">Profile Pic Maker</a>
+      <a href="youtube-thumbnail-downloader.html" data-nav="youtube" data-i18n="nav.youtube">YouTube Thumbnail</a>
+      <a href="image-to-pdf.html" data-nav="pdf" data-i18n="nav.pdf">Image to PDF</a>
+      <a href="word-counter.html" data-nav="wordCounter" data-i18n="nav.wordCounter">Word Counter</a>
+      <a href="password-generator.html" data-nav="passwordGenerator" data-i18n="nav.passwordGenerator">Password Generator</a>
+      <a href="case-converter.html" data-nav="caseConverter" data-i18n="nav.caseConverter">Case Converter</a>
+      <a href="remove-duplicate-lines.html" data-nav="dedupe" data-i18n="nav.dedupe">Remove Duplicate Lines</a>
+      <a href="text-diff-checker.html" data-nav="textDiff" data-i18n="nav.textDiff">Text Diff Checker</a>
+      <a href="lorem-ipsum-generator.html" data-nav="loremIpsum" data-i18n="nav.loremIpsum">Lorem Ipsum Generator</a>
+      <a href="url-slug-generator.html" data-nav="slugGenerator" data-i18n="nav.slugGenerator">URL Slug Generator</a>
+      <a href="json-formatter.html" data-nav="jsonFormatter" data-i18n="nav.jsonFormatter">JSON Formatter</a>
+      <a href="color-converter.html" data-nav="colorConverter" data-i18n="nav.colorConverter">Color Converter</a>
+    </nav>
+    <div class="footer-credit">
+      <span class="credit-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"/>
+          <path d="M14 6l3 3"/>
+        </svg>
+        <span data-i18n="footer.dev">Developed by</span>
+        <span class="credit-name">Shado Designer</span>
+      </span>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> MonoTools — <span data-i18n="footer.copy">All rights reserved</span></p>
+    <nav class="footer-legal">
+      <a href="about.html" data-i18n="footer.about">About Us</a>
+      <a href="contact.html" data-i18n="footer.contact">Contact</a>
+      <a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
